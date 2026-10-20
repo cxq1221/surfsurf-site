@@ -1,0 +1,134 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SurfSurf 隐私政策</title>
+    <link rel="icon" href="assets/icon-128.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="top">
+        <a class="brand" href="./">
+          <img src="assets/icon-128.png" alt="" />
+          SURFSURF
+        </a>
+        <nav>
+          <a href="./">首页</a>
+          <a href="https://github.com/cxq1221/surfsurf-site/issues">反馈</a>
+        </nav>
+      </header>
+
+      <main class="policy">
+        <h1>隐私政策</h1>
+        <p class="meta">生效日期：2026 年 10 月 20 日 · 适用于 Chrome 扩展 SurfSurf</p>
+
+        <h2>简要说明</h2>
+        <p>
+          SurfSurf 没有开发者服务器，不包含统计、广告或追踪代码。扩展只在你触发翻译（手动翻译，或为某个站点开启自动翻译）时读取页面正文，并把待翻译文本发送到你自己配置的模型接口。
+        </p>
+
+        <h2>扩展会处理哪些数据</h2>
+        <ul>
+          <li>
+            <strong>页面正文</strong>：待翻译的文本会发送到你配置的接口（默认
+            <code>https://api.deepseek.com</code>），用于返回译文。开发者不会收到这些内容。
+          </li>
+          <li>
+            <strong>API key</strong>：保存在浏览器的
+            <code>chrome.storage.local</code> 中，只作为请求头发送给你配置的接口，不会上传给开发者。
+          </li>
+          <li>
+            <strong>设置</strong>：目标语言、显示方式、自动翻译站点、模型名称等，保存在本地浏览器。
+          </li>
+          <li>
+            <strong>翻译缓存</strong>：译文保存在浏览器 IndexedDB 中，30 天有效、上限 50 MB，可在设置页一键清除。
+          </li>
+        </ul>
+
+        <h2>不会收集的数据</h2>
+        <p>
+          不读取表单内容、密码、Cookie、浏览历史或输入框内容；不收集姓名、邮箱、位置、健康、金融等个人信息；不向第三方出售或共享数据。
+        </p>
+
+        <h2>第三方接口</h2>
+        <p>
+          翻译请求会直接发送到你配置的模型服务（默认 DeepSeek）。该服务对数据的处理受其自身隐私政策约束。如果你把 Base URL 改成其他服务，页面文本会发送到该地址。
+        </p>
+
+        <h2>权限说明</h2>
+        <ul>
+          <li><code>storage</code>：保存设置与本地缓存。</li>
+          <li><code>https://api.deepseek.com/*</code>：向默认模型接口发送翻译请求。</li>
+          <li>内容脚本（所有网站）：在你触发翻译时读取页面正文并在原位渲染译文。</li>
+        </ul>
+
+        <h2>数据保留与删除</h2>
+        <p>
+          设置与缓存都保存在本地。卸载扩展或在设置页清除缓存即可删除；开发者不保留任何副本。
+        </p>
+
+        <h2>政策更新</h2>
+        <p>本政策如有更新，会修改本页顶部的生效日期。</p>
+
+        <h2>联系方式</h2>
+        <p>
+          如有疑问，请通过
+          <a href="https://github.com/cxq1221/surfsurf-site/issues">GitHub Issues</a>
+          联系。
+        </p>
+
+        <hr />
+
+        <h1 lang="en">Privacy Policy</h1>
+        <p class="meta" lang="en">Effective date: October 20, 2026 · Chrome extension SurfSurf</p>
+
+        <div lang="en">
+          <h2>Summary</h2>
+          <p>
+            SurfSurf has no developer-operated server and contains no analytics, ads or tracking code. The extension reads page text only when you trigger translation (manually or by enabling auto translation for a site), and sends that text to the model endpoint you configure.
+          </p>
+
+          <h2>Data processed</h2>
+          <ul>
+            <li>
+              <strong>Page content</strong>: text selected for translation is sent to your configured endpoint (DeepSeek by default) to produce the translation. The developer never receives it.
+            </li>
+            <li>
+              <strong>API key</strong>: stored in <code>chrome.storage.local</code>. It is sent only to your configured endpoint as an authorization header, never to the developer.
+            </li>
+            <li>
+              <strong>Settings</strong>: target language, display mode, auto-translate sites and model name are stored locally.
+            </li>
+            <li>
+              <strong>Translation cache</strong>: stored in IndexedDB for 30 days, capped at 50 MB, and can be cleared in the settings page.
+            </li>
+          </ul>
+
+          <h2>Data not collected</h2>
+          <p>
+            SurfSurf does not read forms, passwords, cookies, browsing history or input fields, does not collect personal information, and does not sell or share data with third parties.
+          </p>
+
+          <h2>Third-party endpoint</h2>
+          <p>
+            Translation requests go directly to the model service you configure (DeepSeek by default), whose own privacy policy applies. If you change the Base URL, page text is sent to that address instead.
+          </p>
+
+          <h2>Retention and deletion</h2>
+          <p>
+            Settings and cache stay in your browser. Clear the cache in settings or uninstall the extension to delete them. The developer keeps no copy.
+          </p>
+
+          <h2>Contact</h2>
+          <p>
+            Questions? Use
+            <a href="https://github.com/cxq1221/surfsurf-site/issues">GitHub Issues</a>.
+          </p>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
+

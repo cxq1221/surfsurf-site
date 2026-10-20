@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SurfSurf — 把世界读成中文</title>
+    <meta
+      name="description"
+      content="SurfSurf 是一个整页翻译扩展：用 DeepSeek 把海外网站和社区翻译成中文，支持替换原文、双语对照和站点自动翻译。"
+    />
+    <link rel="icon" href="assets/icon-128.png" />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="top">
+        <a class="brand" href="./">
+          <img src="assets/icon-128.png" alt="" />
+          SURFSURF
+        </a>
+        <nav>
+          <a href="#features">功能</a>
+          <a href="privacy.html">隐私</a>
+          <a href="https://github.com/cxq1221/surfsurf-site/issues">反馈</a>
+        </nav>
+      </header>
+
+      <section class="hero">
+        <div>
+          <p class="kicker">CHROME EXTENSION / 个人阅读工具</p>
+          <h1>把世界<br />读成中文</h1>
+          <p class="lede">
+            整页替换原文，也可以双语对照。Reddit、技术博客、新闻站点，一次翻译读完；链接、代码、用户名和技术术语保持原样。
+          </p>
+          <a class="cta pending" href="#install">即将上架 Chrome Web Store</a>
+        </div>
+        <div class="hero-mark">
+          <img src="assets/promo.png" alt="SurfSurf" />
+        </div>
+      </section>
+
+      <figure class="shot">
+        <img src="assets/screenshot-reddit.png" alt="Reddit 双语翻译效果" />
+        <figcaption>Reddit 主贴与评论，原文下方直接给出中文</figcaption>
+      </figure>
+
+      <section class="features" id="features">
+        <div class="feature">
+          <h2>整页翻译，不止正文</h2>
+          <p>
+            优先翻译首屏，后台补齐全文；滚动加载的新内容会继续翻译，失败段落保留原文并可单独重试。
+          </p>
+        </div>
+        <div class="feature">
+          <h2>替换或双语</h2>
+          <p>
+            默认直接替换原文，点击右下角胶囊恢复；也可以保留原文，在每段下方显示译文。
+          </p>
+        </div>
+        <div class="feature">
+          <h2>站点自动翻译</h2>
+          <p>
+            为常用域名开启自动翻译，支持子域名；首次翻译后本地缓存 30 天，重复阅读不再请求模型。
+          </p>
+        </div>
+        <div class="feature">
+          <h2>自己的模型</h2>
+          <p>
+            默认 DeepSeek（<code>deepseek-flash</code>），API key 只保存在本机浏览器，也可以接入任意 OpenAI 兼容接口。
+          </p>
+        </div>
+      </section>
+
+      <section id="install" class="features">
+        <div class="feature">
+          <h2>安装</h2>
+          <p>
+            商店审核通过后，这里会换成正式的 Chrome Web Store 安装按钮。当前可以先从源码构建：
+            <code>npm install &amp;&amp; npm run build</code>，在
+            <code>chrome://extensions</code> 加载 <code>.output/chrome-mv3</code>。
+          </p>
+        </div>
+        <div class="feature">
+          <h2>快捷键</h2>
+          <p>
+            <code>⌘⇧S</code>（Windows/Linux 为 <code>Ctrl+Shift+S</code>）翻译全文，<code>Alt+T</code> 切换原文与译文。
+          </p>
+        </div>
+      </section>
+
+      <footer>
+        <span>SurfSurf · 个人阅读工具</span>
+        <span>
+          <a href="privacy.html">隐私政策</a> ·
+          <a href="https://github.com/cxq1221/surfsurf-site/issues">问题反馈</a>
+        </span>
+      </footer>
+    </div>
+  </body>
+</html>
+
