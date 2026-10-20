@@ -26,13 +26,13 @@
 
         <h2>简要说明</h2>
         <p>
-          SurfSurf 没有开发者服务器，不包含统计、广告或追踪代码。扩展只在你触发翻译（手动翻译，或为某个站点开启自动翻译）时读取页面正文，并把待翻译文本发送到你自己配置的模型接口。
+          SurfSurf 没有开发者服务器，不包含统计、广告或追踪代码。扩展只在你触发翻译（手动翻译、为某个站点开启自动翻译，或启用写作翻译并在支持的编辑器中输入）时读取待翻译文本，并发送到你自己配置的模型接口。
         </p>
 
         <h2>扩展会处理哪些数据</h2>
         <ul>
           <li>
-            <strong>页面正文</strong>：待翻译的文本会发送到你配置的接口（默认
+            <strong>页面正文与写作内容</strong>：待翻译的页面文本，以及你在已启用的写作翻译编辑器中输入的内容，会发送到你配置的接口（默认
             <code>https://api.deepseek.com</code>），用于返回译文。开发者不会收到这些内容。
           </li>
           <li>
@@ -45,11 +45,14 @@
           <li>
             <strong>翻译缓存</strong>：译文保存在浏览器 IndexedDB 中，30 天有效、上限 50 MB，可在设置页一键清除。
           </li>
+          <li>
+            <strong>写作历史</strong>：只保存最近 20 条已发送的中英对照，可在设置页清除；未发送草稿不落盘。
+          </li>
         </ul>
 
         <h2>不会收集的数据</h2>
         <p>
-          不读取表单内容、密码、Cookie、浏览历史或输入框内容；不收集姓名、邮箱、位置、健康、金融等个人信息；不向第三方出售或共享数据。
+          不读取密码、搜索框、单行输入框、Cookie 或浏览历史；不会代替你点击发送按钮或调用站点发布接口；不收集姓名、邮箱、位置、健康、金融等个人信息；不向第三方出售或共享数据。
         </p>
 
         <h2>第三方接口</h2>
@@ -61,7 +64,7 @@
         <ul>
           <li><code>storage</code>：保存设置与本地缓存。</li>
           <li><code>https://api.deepseek.com/*</code>：向默认模型接口发送翻译请求。</li>
-          <li>内容脚本（所有网站）：在你触发翻译时读取页面正文并在原位渲染译文。</li>
+          <li>内容脚本（所有网站）：在你触发翻译时读取页面正文并在原位渲染译文；写作翻译启用时，读取受支持的多行评论/正文编辑器内容。</li>
         </ul>
 
         <h2>数据保留与删除</h2>
@@ -87,13 +90,13 @@
         <div lang="en">
           <h2>Summary</h2>
           <p>
-            SurfSurf has no developer-operated server and contains no analytics, ads or tracking code. The extension reads page text only when you trigger translation (manually or by enabling auto translation for a site), and sends that text to the model endpoint you configure.
+            SurfSurf has no developer-operated server and contains no analytics, ads or tracking code. The extension reads text only when you trigger translation (manually, by enabling auto translation for a site, or by typing in a supported editor while writing translation is enabled), and sends that text to the model endpoint you configure.
           </p>
 
           <h2>Data processed</h2>
           <ul>
             <li>
-              <strong>Page content</strong>: text selected for translation is sent to your configured endpoint (DeepSeek by default) to produce the translation. The developer never receives it.
+              <strong>Page and writing content</strong>: page text selected for translation, plus text you type in an enabled writing-translation editor, is sent to your configured endpoint (DeepSeek by default) to produce the translation. The developer never receives it.
             </li>
             <li>
               <strong>API key</strong>: stored in <code>chrome.storage.local</code>. It is sent only to your configured endpoint as an authorization header, never to the developer.
@@ -104,11 +107,14 @@
             <li>
               <strong>Translation cache</strong>: stored in IndexedDB for 30 days, capped at 50 MB, and can be cleared in the settings page.
             </li>
+            <li>
+              <strong>Writing history</strong>: only the latest 20 sent bilingual entries are stored locally; unsent drafts are not persisted. You can clear the history in settings.
+            </li>
           </ul>
 
           <h2>Data not collected</h2>
           <p>
-            SurfSurf does not read forms, passwords, cookies, browsing history or input fields, does not collect personal information, and does not sell or share data with third parties.
+            SurfSurf does not read passwords, search boxes, single-line inputs, cookies or browsing history, does not submit posts or comments on your behalf, does not collect personal information, and does not sell or share data with third parties.
           </p>
 
           <h2>Third-party endpoint</h2>

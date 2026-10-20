@@ -6,7 +6,7 @@
     <title>SurfSurf — 把世界读成中文</title>
     <meta
       name="description"
-      content="SurfSurf 是一个整页翻译扩展：用 DeepSeek 把海外网站和社区翻译成中文，支持替换原文、双语对照和站点自动翻译。"
+      content="SurfSurf 是一个阅读与写作翻译扩展：用 DeepSeek 把海外网站和社区翻译成中文，也能在评论框里把中文写成英文。"
     />
     <link rel="icon" href="assets/icon-128.png" />
     <link rel="stylesheet" href="style.css" />
@@ -30,7 +30,7 @@
           <p class="kicker">CHROME EXTENSION / 个人阅读工具</p>
           <h1>把世界<br />读成中文</h1>
           <p class="lede">
-            整页替换原文，也可以双语对照。Reddit、技术博客、新闻站点，一次翻译读完；链接、代码、用户名和技术术语保持原样。
+            整页替换原文，也可以双语对照。Reddit、技术博客、新闻站点，一次翻译读完；还能在评论框里用中文起草，再把英文写回站点。
           </p>
           <a class="cta pending" href="#install">即将上架 Chrome Web Store</a>
         </div>
@@ -42,6 +42,11 @@
       <figure class="shot">
         <img src="assets/screenshot-reddit.png" alt="Reddit 双语翻译效果" />
         <figcaption>Reddit 主贴与评论，原文下方直接给出中文</figcaption>
+      </figure>
+
+      <figure class="shot shot-writing">
+        <img src="assets/screenshot-writing.png" alt="Reddit 写作翻译效果" />
+        <figcaption>在评论框里输入中文，确认英文预览后写回站点编辑器</figcaption>
       </figure>
 
       <section class="features" id="features">
@@ -64,6 +69,12 @@
           </p>
         </div>
         <div class="feature">
+          <h2>写作翻译</h2>
+          <p>
+            在 Reddit 评论/回复或通用多行编辑器里输入中文，生成可编辑的英文预览；确认后写回原生编辑器，由你手动发送。
+          </p>
+        </div>
+        <div class="feature">
           <h2>自己的模型</h2>
           <p>
             默认 DeepSeek（<code>deepseek-flash</code>），API key 只保存在本机浏览器，也可以接入任意 OpenAI 兼容接口。
@@ -83,7 +94,7 @@
         <div class="feature">
           <h2>快捷键</h2>
           <p>
-            <code>⌘⇧S</code>（Windows/Linux 为 <code>Ctrl+Shift+S</code>）翻译全文，<code>Alt+T</code> 切换原文与译文。
+            <code>⌘⇧S</code>（Windows/Linux 为 <code>Ctrl+Shift+S</code>）翻译全文，<code>Alt+T</code> 切换原文与译文；写作面板用 <code>⌥E</code> 开合、<code>⌘⇧↵</code> 替换。
           </p>
         </div>
       </section>
